@@ -9,9 +9,7 @@ export function Chat() {
     const [leads, setLeads] = useState<Lead[]>([]);
     const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
     const [chatHistory, setChatHistory] = useState<ChatHistory[]>([]);
-    const [filter, setFilter] = useState<'all' | 'repassado' | 'urgente'>('all');
-    const [loading, setLoading] = useState(true);
-    const [loadingChat, setLoadingChat] = useState(false);
+    const [filter] = useState<'all' | 'repassado' | 'urgente'>('all');
     const [newMessage, setNewMessage] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -123,14 +121,11 @@ export function Chat() {
             setLeads(data || []);
         } catch (error) {
             console.error('Error fetching leads:', error);
-        } finally {
-            setLoading(false);
         }
     }
 
     async function fetchChatHistory(sessionId: string | null) {
         if (!sessionId) return;
-        setLoadingChat(true);
         try {
             // Assuming session_id in chat history matches telefone in leads
             const { data, error } = await supabase
@@ -143,8 +138,6 @@ export function Chat() {
             setChatHistory(data || []);
         } catch (error) {
             console.error('Error fetching chat history:', error);
-        } finally {
-            setLoadingChat(false);
         }
     }
 

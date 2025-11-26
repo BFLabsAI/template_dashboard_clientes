@@ -11,15 +11,6 @@ interface KPICardProps {
 }
 
 export function KPICard({ title, value, icon: Icon, trend, trendUp, color = 'indigo' }: KPICardProps) {
-    const colorStyles = {
-        blue: "from-blue-500 to-blue-600 shadow-blue-500/20",
-        green: "from-emerald-500 to-emerald-600 shadow-emerald-500/20",
-        orange: "from-orange-500 to-orange-600 shadow-orange-500/20",
-        red: "from-rose-500 to-rose-600 shadow-rose-500/20",
-        indigo: "from-indigo-500 to-indigo-600 shadow-indigo-500/20",
-        violet: "from-violet-500 to-violet-600 shadow-violet-500/20",
-    };
-
     const iconColorStyles = {
         blue: "text-blue-600 bg-blue-100 border border-blue-200",
         green: "text-emerald-600 bg-emerald-100 border border-emerald-200",

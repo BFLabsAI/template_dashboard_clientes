@@ -32,7 +32,7 @@ export function ShiftPreferenceChart({ data }: ShiftPreferenceChartProps) {
                         labelLine={false}
                         label={renderCustomLabel}
                     >
-                        {data.map((entry, index) => (
+                        {data.map((_entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                     </Pie>

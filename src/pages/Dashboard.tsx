@@ -7,7 +7,7 @@ import { StatusChart } from '../components/charts/StatusChart';
 import { ProcedureChart } from '../components/charts/ProcedureChart';
 import { ShiftPreferenceChart } from '../components/charts/ShiftPreferenceChart';
 import { CadenceVolumeChart } from '../components/charts/CadenceVolumeChart';
-import { Users, UserCheck, MessageCircle, AlertTriangle, Calendar, Download, DollarSign, Target, Leaf, BarChart2, Image } from 'lucide-react';
+import { Users, UserCheck, MessageCircle, AlertTriangle, Calendar, Download, Target, Leaf, BarChart2 } from 'lucide-react';
 import type { Lead } from '../types';
 import { format, subDays, isWithinInterval, parseISO, startOfDay, endOfDay } from 'date-fns';
 
@@ -51,7 +51,6 @@ export function Dashboard() {
     // Calculate KPIs based on filtered leads
     const totalLeads = filteredLeads.length;
     const repassedLeads = filteredLeads.filter(l => l.status_lead === 'repassado').length;
-    const newLeads = filteredLeads.filter(l => l.status_lead === 'novo').length;
     const engagementRate = totalLeads > 0 ? Math.round((repassedLeads / totalLeads) * 100) : 0;
 
     // Calculate average leads per day based on actual data in table
@@ -184,7 +183,7 @@ export function Dashboard() {
                         <div className="space-y-4">
                             {topCreatives.map((creative, index) => {
                                 const isOrganic = !creative.mediaUrl;
-                                const bgColor = isOrganic ? 'bg-emerald-500' : 'bg-pink-500';
+
                                 const borderColor = isOrganic ? 'hover:border-emerald-400/30' : 'hover:border-pink-400/30';
                                 const progressColor = isOrganic ? 'bg-emerald-500' : 'bg-pink-500';
 
