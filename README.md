@@ -1,6 +1,6 @@
-# Dashboard Clínica Orus
+# Client Dashboard Template
 
-Um dashboard moderno e interativo para gestão de leads e atendimentos da Clínica Orus, desenvolvido com React, TypeScript e Vite.
+Um dashboard moderno e interativo para gestão de leads e atendimentos, desenvolvido com React, TypeScript e Vite. Este template serve como base para implementação de dashboards personalizados para clientes.
 
 ## 🚀 Características
 
@@ -27,8 +27,8 @@ Um dashboard moderno e interativo para gestão de leads e atendimentos da Clíni
 ### Dashboard Principal
 - KPIs em tempo real (Total de Leads, Leads Repassados, Taxa de Engajamento, Média de Leads/Dia)
 - Gráficos de Status dos Leads
-- Análise de Procedimentos
-- Preferências de Turno
+- Análise de Procedimentos/Produtos
+- Preferências de Horário/Turno
 - Volume por Dia da Cadência
 
 ### Análise de Leads
@@ -104,15 +104,10 @@ src/
 
 ## 🤖 IA Integration
 
-- **Resumo Automático**: Geração de resumos de conversas usando Grok AI
+- **Resumo Automático**: Geração de resumos de conversas usando IA
 - **Análise de Atendimento**: Avaliação automática da qualidade
 - **Classificação de Leads**: Identificação automática de tipos de leads
 
 ## 📄 Licença
 
-Este projeto é proprietary da Clínica Orus.
-
----
-
-**Desenvolvido para Clínica Orus** 🏥
-*Dashboard de Gestão de Leads com IA*
+Este projeto é um template proprietário da BFLabs.
