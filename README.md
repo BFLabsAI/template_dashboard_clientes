@@ -1,113 +1,65 @@
-# Client Dashboard Template
+# Dashboard Escritório Dantas e Filizola ⚖️
 
-Um dashboard moderno e interativo para gestão de leads e atendimentos, desenvolvido com React, TypeScript e Vite. Este template serve como base para implementação de dashboards personalizados para clientes.
+Dashboard exclusivo desenvolvido para o **Escritório Dantas e Filizola**, focado na gestão eficiente de leads jurídicos e análise de atendimentos.
 
-## 🚀 Características
+## 🚀 Visão Geral
 
-- **Dashboard Analytics**: Visualização de métricas e KPIs em tempo real
-- **Gestão de Leads**: Acompanhamento completo do status e origem dos leads
-- **Chat Interface**: Sistema de atendimento com IA integrada
-- **Análise de Criativos**: Performance tracking de campanhas publicitárias
-- **Relatórios Visuais**: Gráficos interativos com Recharts
-- **Design Responsivo**: Interface adaptável para desktop e mobile
+Este sistema foi customizado para atender às necessidades específicas do escritório, permitindo o acompanhamento de:
+- **Leads por Tipo de Caso**: Monitoramento de BPC LOAS, Auxílio Maternidade, Previdenciário, etc.
+- **Eficiência do Atendimento**: Métricas de leads repassados e tempo de resposta.
+- **Performance de Marketing**: Análise de campanhas (Ads vs Orgânico) e criativos.
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias Principais
 
-- **React 19** - Framework frontend
-- **TypeScript** - Tipagem estática
-- **Vite** - Build tool e dev server
-- **Tailwind CSS** - Framework CSS utilitário
-- **Recharts** - Biblioteca de gráficos
-- **Lucide React** - Ícones modernos
-- **Supabase** - Backend e database
-- **React Router** - Roteamento SPA
+- **Frontend**: React 19, TypeScript, Vite
+- **Estilização**: Tailwind CSS (Navy Theme customizado)
+- **Gráficos**: Recharts
+- **Ícones**: Lucide React
+- **Backend / Dados**: Supabase (Tabelas `leads_filizola`)
 
-## 📊 Funcionalidades
+## 📊 Funcionalidades Chave
 
-### Dashboard Principal
-- KPIs em tempo real (Total de Leads, Leads Repassados, Taxa de Engajamento, Média de Leads/Dia)
-- Gráficos de Status dos Leads
-- Análise de Procedimentos/Produtos
-- Preferências de Horário/Turno
-- Volume por Dia da Cadência
+### 1. Dashboard de Gestão
+- **KPIs Estratégicos**: Total de leads, leads repassados, taxa de engajamento e média diária.
+- **Filtros Avançados**: Seleção por período, permitindo análises históricas precisas.
+- **Gráficos de Turno e Cadência**: Entenda os melhores horários e dias de contato.
 
-### Análise de Leads
-- **Origem dos Leads**: Diferenciação entre tráfego pago e orgânico
-- **Top Criativos**: Performance de campanhas com cores neon diferenciadas
-- **Status Tracking**: Acompanhamento de "novo lead" vs "repassado"
+### 2. Tabela de Leads Recentes
+- **Paginação**: Navegação fluida entre centenas de leads.
+- **Detalhes do Caso**: Visualização rápida do "Produto de Interesse" e "Tipo de Caso".
+- **Status Coloridos**: Identificação visual rápida (Novo, Repassado, etc.).
+- **Atendimento Humano**: Filtro e visualização dedicada para leads em tratamento manual.
 
-### Interface de Chat
-- Sistema de mensagens em tempo real
-- Resumo automático com IA
-- Análise de sentimento e qualidade do atendimento
-- Histórico de conversas
+### 3. Integrações
+- **Botão de Chat**: Integração direta para iniciar atendimentos via WhatsApp.
+- **Exportação CSV**: Download completo da base de leads para relatórios externos.
 
-## 🎨 Design System
-
-- **Tema**: Navy/Dark theme com cores neon
-- **Cores Principais**:
-  - Cyan: Tráfego Pago
-  - Green: Tráfego Orgânico
-  - Pink: Criativos/Ads
-- **Tipografia**: Outfit (Google Fonts)
-- **Componentes**: Design system consistente
-
-## 🚦 Como Executar
+## 🚦 Como Rodar Localmente
 
 ```bash
-# Instalar dependências
+# Clone o repositório
+git clone https://github.com/BFLabsAI/dashboard_filizola.git
+
+# Instale as dependências
 npm install
 
-# Executar em desenvolvimento
+# Inicie o servidor de desenvolvimento
 npm run dev
-
-# Build para produção
-npm run build
-
-# Preview do build
-npm run preview
 ```
 
-## 📱 Funcionalidades Mobile
+## 🔒 Variáveis de Ambiente
 
-- Sidebar responsiva
-- Navegação otimizada
-- Gráficos adaptáveis
-- Interface touch-friendly
-
-## 🔧 Configuração
-
-O projeto utiliza variáveis de ambiente através do arquivo `.env`:
+O projeto requer configuração das chaves do Supabase no arquivo `.env`:
 
 ```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_key
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
 ```
 
-## 📈 Estrutura do Projeto
+## 📱 Suporte
 
-```
-src/
-├── components/         # Componentes reutilizáveis
-│   ├── charts/        # Gráficos especializados
-│   ├── KPICard.tsx    # Cards de métricas
-│   └── Layout.tsx     # Layout principal
-├── pages/             # Páginas da aplicação
-│   ├── Dashboard.tsx  # Dashboard principal
-│   ├── Chat.tsx       # Interface de chat
-│   └── Settings.tsx   # Configurações
-├── lib/               # Utilitários
-│   └── supabase.ts    # Cliente Supabase
-├── types.ts           # Definições TypeScript
-└── assets/            # Assets estáticos
-```
+Desenvolvido e mantido por **BFLabs AI**.
+Em caso de dúvidas ou problemas, entre em contato com o suporte técnico.
 
-## 🤖 IA Integration
-
-- **Resumo Automático**: Geração de resumos de conversas usando IA
-- **Análise de Atendimento**: Avaliação automática da qualidade
-- **Classificação de Leads**: Identificação automática de tipos de leads
-
-## 📄 Licença
-
-Este projeto é um template proprietário da BFLabs.
+---
+© 2025 Escritório Dantas e Filizola. Todos os direitos reservados.
