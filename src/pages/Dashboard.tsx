@@ -7,7 +7,7 @@ import { StatusChart } from '../components/charts/StatusChart';
 
 import { ShiftPreferenceChart } from '../components/charts/ShiftPreferenceChart';
 import { CadenceVolumeChart } from '../components/charts/CadenceVolumeChart';
-import { Users, UserCheck, MessageCircle, AlertTriangle, Calendar, Download, Target, Leaf, BarChart2 } from 'lucide-react';
+import { Users, UserCheck, MessageCircle, Calendar, Download, Target, Leaf, BarChart2 } from 'lucide-react';
 import type { Lead } from '../types';
 import { format, subDays, isWithinInterval, parseISO, startOfDay, endOfDay, differenceInDays } from 'date-fns';
 
